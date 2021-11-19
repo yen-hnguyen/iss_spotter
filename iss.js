@@ -36,7 +36,7 @@ const fetchCoordsByIP = function(ip, callback) {
     if (error) return callback(error);
 
     if (response.statusCode !== 200) {
-      const msg = `Status Code ${response.statusCode} when fetching coordinates of IP. Response: ${body}`;
+      const msg = `Status Code ${response.statusCode} when fetching coordinates of current IP. Response: ${body}`;
       callback(Error(msg), null);
       return;
     }
